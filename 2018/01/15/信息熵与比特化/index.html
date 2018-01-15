@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="AI小店">
 <meta property="og:description" content="比特化 比如出现BACDBDDCD，那么可以用00,01,10,11来表示ABCD。如果出现概率不一样，那么出现概率大的，用1位数来表示，出现次数少的，用多位数来表示，这样可以减少均值（用0，1进行表示的时候，开头不能一样）。  信息熵 信息熵：一个系统越有序，则信息熵越低。反之，越高。 高信息熵（high entropy）：随机变量x是均匀分布的，各种取值是等概率出现，很难判断出现什么事件。 低">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-15T03:47:15.000Z">
+<meta property="og:updated_time" content="2018-01-15T06:26:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息熵与比特化">
 <meta name="twitter:description" content="比特化 比如出现BACDBDDCD，那么可以用00,01,10,11来表示ABCD。如果出现概率不一样，那么出现概率大的，用1位数来表示，出现次数少的，用多位数来表示，这样可以减少均值（用0，1进行表示的时候，开头不能一样）。  信息熵 信息熵：一个系统越有序，则信息熵越低。反之，越高。 高信息熵（high entropy）：随机变量x是均匀分布的，各种取值是等概率出现，很难判断出现什么事件。 低">
@@ -188,6 +188,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -317,7 +327,12 @@
 <h3 id="信息熵"><a href="#信息熵" class="headerlink" title="信息熵"></a>信息熵</h3><ul>
 <li>信息熵：一个系统越有序，则信息熵越低。反之，越高。</li>
 <li>高信息熵（high entropy）：随机变量x是均匀分布的，各种取值是等概率出现，很难判断出现什么事件。</li>
-<li>低信息熵（low entropy）：随机变量x不是等概率出现，可能出现概率很大事件，也可能出现概率很小事件，容易判断事件发生。<br>$$E(X) = {-\sum_{i=1}^n{p_i\log_2 (p_i)}}.$$</li>
+<li>低信息熵（low entropy）：随机变量x不是等概率出现，可能出现概率很大事件，也可能出现概率很小事件，容易判断事件发生。<br>$$E(X) = {-\sum_{i=1}^n{p_i\log_2 (p_i)}}$$</li>
+</ul>
+<h3 id="条件熵"><a href="#条件熵" class="headerlink" title="条件熵"></a>条件熵</h3><ul>
+<li>定义：给定随机事件X的情况下，所有不同X值情况下Y的信息熵的平均值叫做条件熵。</li>
+<li>公式一：$$H(Y|X) = {-\sum_{j=1}^n{P(X=v_j)H(Y|X=v_j)}}$$</li>
+<li>公式二：事件(X,Y)发生所包含的熵，减去事件X单独发生的熵，即为事件X发生的前提下，Y发生’新’带来的熵，这个也就是条件熵本真的概念。<br>$$H(Y|X) = {H(X,Y)-H(X)}$$</li>
 </ul>
 
       
@@ -451,7 +466,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -494,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#比特化"><span class="nav-number">1.</span> <span class="nav-text">比特化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息熵"><span class="nav-number">2.</span> <span class="nav-text">信息熵</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#比特化"><span class="nav-number">1.</span> <span class="nav-text">比特化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息熵"><span class="nav-number">2.</span> <span class="nav-text">信息熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件熵"><span class="nav-number">3.</span> <span class="nav-text">条件熵</span></a></li></ol></div>
             
 
           </div>
