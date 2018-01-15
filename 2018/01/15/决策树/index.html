@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="AI小店">
 <meta property="og:description" content="概念 算法分类：有监督的分类算法。 定义：决策树(Decision Tree)是在已知各种情况发生概率的基础上，通过构建决策树来进行分析的一种方式，是一种直观应用概率分析的一种图解法;决策树是一种预测模型，代表的是对象属性与对象值之间的映射关系;决策树是一种树形结构，其中每个内部节点表示一个属性的测试，每个分支表示一个测试输出，每个叶节点代表一种类别; 决策树的决策过程就是从根节点开始，测试待分类">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-15T07:50:02.000Z">
+<meta property="og:updated_time" content="2018-01-15T10:04:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="决策树">
 <meta name="twitter:description" content="概念 算法分类：有监督的分类算法。 定义：决策树(Decision Tree)是在已知各种情况发生概率的基础上，通过构建决策树来进行分析的一种方式，是一种直观应用概率分析的一种图解法;决策树是一种预测模型，代表的是对象属性与对象值之间的映射关系;决策树是一种树形结构，其中每个内部节点表示一个属性的测试，每个分支表示一个测试输出，每个叶节点代表一种类别; 决策树的决策过程就是从根节点开始，测试待分类">
@@ -356,6 +356,11 @@
 <li>决策树的效果评估和一般的分类算法一样，采用混淆矩阵来进行计算准确率、召回率、精确率等指标。</li>
 <li>也可以采用叶子节点的纯度值总和来评估算法的效果，值越小，则模型效果越好。其中Dt为第t个叶子节点的样本数，D为总样本数，H(t)为第t个样子节点的熵/Gini/Error。<br>$$loss = \sum_{t=1}^{leaf}{\frac{|D_t|}{|D|}H(t)}$$</li>
 </ul>
+<h3 id="实际执行过程"><a href="#实际执行过程" class="headerlink" title="实际执行过程"></a>实际执行过程</h3><ul>
+<li>计算每个特性的信息增益度，然后选取信息增益度最大的作为分割节点。</li>
+<li>然后计算反复的计算，知道计算的特性。</li>
+<li>注意点：连续型的值一般分为2个分支，大于某个值和小于某个值。</li>
+</ul>
 
       
     </div>
@@ -535,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建过程"><span class="nav-number">2.</span> <span class="nav-text">构建过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树量化纯度"><span class="nav-number">3.</span> <span class="nav-text">决策树量化纯度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息增益度"><span class="nav-number">4.</span> <span class="nav-text">信息增益度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停止条件"><span class="nav-number">5.</span> <span class="nav-text">停止条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树算法效果评估"><span class="nav-number">6.</span> <span class="nav-text">决策树算法效果评估</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建过程"><span class="nav-number">2.</span> <span class="nav-text">构建过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树量化纯度"><span class="nav-number">3.</span> <span class="nav-text">决策树量化纯度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息增益度"><span class="nav-number">4.</span> <span class="nav-text">信息增益度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停止条件"><span class="nav-number">5.</span> <span class="nav-text">停止条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树算法效果评估"><span class="nav-number">6.</span> <span class="nav-text">决策树算法效果评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际执行过程"><span class="nav-number">7.</span> <span class="nav-text">实际执行过程</span></a></li></ol></div>
             
 
           </div>
