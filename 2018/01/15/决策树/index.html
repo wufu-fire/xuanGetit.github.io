@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="AI小店">
 <meta property="og:description" content="概念 算法分类：有监督的分类算法。 定义：决策树(Decision Tree)是在已知各种情况发生概率的基础上，通过构建决策树来进行分析的一种方式，是一种直观应用概率分析的一种图解法;决策树是一种预测模型，代表的是对象属性与对象值之间的映射关系;决策树是一种树形结构，其中每个内部节点表示一个属性的测试，每个分支表示一个测试输出，每个叶节点代表一种类别; 决策树的决策过程就是从根节点开始，测试待分类">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-15T06:51:13.000Z">
+<meta property="og:updated_time" content="2018-01-15T07:50:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="决策树">
 <meta name="twitter:description" content="概念 算法分类：有监督的分类算法。 定义：决策树(Decision Tree)是在已知各种情况发生概率的基础上，通过构建决策树来进行分析的一种方式，是一种直观应用概率分析的一种图解法;决策树是一种预测模型，代表的是对象属性与对象值之间的映射关系;决策树是一种树形结构，其中每个内部节点表示一个属性的测试，每个分支表示一个测试输出，每个叶节点代表一种类别; 决策树的决策过程就是从根节点开始，测试待分类">
@@ -327,12 +327,34 @@
 <li>决策树的决策过程就是从根节点开始，测试待分类项中对应的特征属性，并按照其值选择输出分支，直到叶子节点，将叶子节点的存放的类别作为决策结果。</li>
 <li>决策树分为两大类:分类树和回归树，前者用于分类标签值，后者用于预测连续 值，常用算法有ID3、C4.5、CART等。</li>
 <li>C4.5、CART是ID3的延伸。</li>
+<li>目标：让各个分裂子集尽可能的”纯”，既熵小。</li>
 </ul>
 <h3 id="构建过程"><a href="#构建过程" class="headerlink" title="构建过程"></a>构建过程</h3><ul>
 <li>将所有的特征看成一个一个的节点</li>
 <li>遍历每个特征的每一种分割方式，找到最好的分割点;将数据划分为不同的子节点，eg: N1、 N2….Nm;计算划分之后所有子节点的’纯度’信息;</li>
 <li>对第二步产生的分割，选择出最优的特征以及最优的划分方式;得出最终的子节点: N1、N2….Nm</li>
 <li>对子节点N1、N2….Nm分别继续执行2-3步，直到每个最终的子节点都足够’纯’</li>
+</ul>
+<h3 id="决策树量化纯度"><a href="#决策树量化纯度" class="headerlink" title="决策树量化纯度"></a>决策树量化纯度</h3><ul>
+<li>决策树的构建是基于样本概率和纯度进行构建操作的，那么进行判断数据集是否 “纯”可以通过三个公式进行判断，分别是Gini系数、熵(Entropy)、错误率，这 三个公式值越大，表示数据越“不纯”;越小表示越“纯”。</li>
+<li>错误率：当Error越小，表明某个事件出现个概率越大，则越有序，分类就越好。$$Error = 1- max\{P(i)\}_{i=1}^n$$</li>
+<li>Gini系数（程序实现的时候最重要）：当Gini越小，表明某个事件出现个概率趋近于1，则越有序，分类就越好。$$E(X) = {1-\sum_{i=1}^np_i^2}$$</li>
+<li>熵（entropy）（理解原理的时候最重要）：同理。$$E(X) = {-\sum_{i=1}^n{p_i\log_2 (p_i)}}$$</li>
+</ul>
+<h3 id="信息增益度"><a href="#信息增益度" class="headerlink" title="信息增益度"></a>信息增益度</h3><ul>
+<li>如果信息增益度越大，则证明在A属性上进行分割的时候，H(D|A)就越小，那么就越有序。$$Gain = \Delta  = H(D) - H(D|A)$$</li>
+</ul>
+<h3 id="停止条件"><a href="#停止条件" class="headerlink" title="停止条件"></a>停止条件</h3><ul>
+<li>决策树的构建过程是一个递归过程。</li>
+<li>可选条件：<ul>
+<li>当每一个子节点只有一个类型的时候（可能导致过拟合）。</li>
+<li>当前节点中的记录数小于某个阈值，同时迭代次数达到给定值（实际使用比较多）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="决策树算法效果评估"><a href="#决策树算法效果评估" class="headerlink" title="决策树算法效果评估"></a>决策树算法效果评估</h3><ul>
+<li>决策树的效果评估和一般的分类算法一样，采用混淆矩阵来进行计算准确率、召回率、精确率等指标。</li>
+<li>也可以采用叶子节点的纯度值总和来评估算法的效果，值越小，则模型效果越好。其中Dt为第t个叶子节点的样本数，D为总样本数，H(t)为第t个样子节点的熵/Gini/Error。<br>$$loss = \sum_{t=1}^{leaf}{\frac{|D_t|}{|D|}H(t)}$$</li>
 </ul>
 
       
@@ -513,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建过程"><span class="nav-number">2.</span> <span class="nav-text">构建过程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建过程"><span class="nav-number">2.</span> <span class="nav-text">构建过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树量化纯度"><span class="nav-number">3.</span> <span class="nav-text">决策树量化纯度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息增益度"><span class="nav-number">4.</span> <span class="nav-text">信息增益度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停止条件"><span class="nav-number">5.</span> <span class="nav-text">停止条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树算法效果评估"><span class="nav-number">6.</span> <span class="nav-text">决策树算法效果评估</span></a></li></ol></div>
             
 
           </div>
