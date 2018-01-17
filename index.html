@@ -253,6 +253,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/17/Ensemble-Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="breeze">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/log.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI小店">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/17/Ensemble-Learning/" itemprop="url">集成学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T14:17:26+08:00">
+                2018-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ML/" itemprop="url" rel="index">
+                    <span itemprop="name">ML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>定义：集成学习的思想是将若干个学习器（分类器&amp;回归器）组合之后产生一个新学习器。弱分类器（week learner）指那些分类准确率稍微好于随机猜测的分类器（error rate &lt; 0.5）</li>
+<li>集成算法的成功在于保证弱分类器的多样性(Diversity)。而且集成不稳定的算法 也能够得到一个比较明显的性能提升。</li>
+<li>常见的集成学习思想有:Bagging，Boosting，Stacking</li>
+</ul>
+<h3 id="为什么需要集成学习"><a href="#为什么需要集成学习" class="headerlink" title="为什么需要集成学习"></a>为什么需要集成学习</h3><ul>
+<li>弱分类器间存在一定的差异性，这会导致分类的边界不同，也就是说可能存在 错误。那么将多个弱分类器合并后，就可以得到更加合理的边界，减少整体的错 误率，实现更好的效果;</li>
+<li>对于数据集过大或者过小，可以分别进行划分和有放回的操作产生不同的数据 子集，然后使用数据子集训练不同的分类器，最终再合并成为一个大的分类器;</li>
+<li>如果数据的划分边界过于复杂，使用线性模型很难描述情况，那么可以训练多 个模型，然后再进行模型的融合;</li>
+<li>对于多个异构的特征集的时候，很难进行融合，那么可以考虑每个数据集构建 一个分类模型，然后将多个模型融合。</li>
+</ul>
+<h3 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h3><ul>
+<li>Bagging方法又叫做自举汇聚法(Bootstrap Aggregating)，思想是:在原始数 据集上通过有放回的抽样的方式，重新选择出S个新数据集来分别训练S个分类器 的集成技术。也就是说这些模型的训练数据中允许存在重复数据。</li>
+<li>Bagging方法训练出来的模型在预测新样本分类的时候，会使用多数<em>投票</em>（有权重）或者求 均值的方式来统计最终的分类结果。</li>
+<li>Bagging方法的弱学习器可以是基本的算法模型，eg: Linear、Ridge、Lasso、 Logistic、Softmax、ID3、C4.5、CART、SVM、KNN等。</li>
+<li>备注:Bagging方式是有放回的抽样，并且每个子集的样本数量必须和原始样本 数量一致，但是子集中允许存在重复数据。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/15/信息熵与比特化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -294,6 +452,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ML/" itemprop="url" rel="index">
+                    <span itemprop="name">ML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -426,6 +606,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ML/" itemprop="url" rel="index">
+                    <span itemprop="name">ML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -711,6 +913,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ML/" itemprop="url" rel="index">
+                    <span itemprop="name">ML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -846,12 +1070,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -859,7 +1092,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
