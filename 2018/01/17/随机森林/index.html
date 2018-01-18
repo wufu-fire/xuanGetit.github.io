@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="entropy," />
+  <meta name="keywords" content="RF," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="比特化 比如出现BACDBDDCD，那么可以用00,01,10,11来表示ABCD。如果出现概率不一样，那么出现概率大的，用1位数来表示，出现次数少的，用多位数来表示，这样可以减少均值（用0，1进行表示的时候，开头不能一样）。  信息熵 信息熵：一个系统越有序，则信息熵越低。反之，越高。 高信息熵（high entropy）：随机变量x是均匀分布的，各种取值是等概率出现，很难判断出现什么事件。 低">
-<meta name="keywords" content="entropy">
+<meta name="description" content="随机森林是在Bagging策略的基础上进行修改后的一种算法 从样本集中用Bootstrap（有放回的重采样）采样选出n个样本; 从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树; 重复以上两步m次，即建立m棵决策树; 这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类  RF的推广算法 RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转">
+<meta name="keywords" content="RF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信息熵与比特化">
-<meta property="og:url" content="https://xuangetit.github.io/2018/01/15/信息熵与比特化/index.html">
+<meta property="og:title" content="随机森林">
+<meta property="og:url" content="https://xuangetit.github.io/2018/01/17/随机森林/index.html">
 <meta property="og:site_name" content="AI小店">
-<meta property="og:description" content="比特化 比如出现BACDBDDCD，那么可以用00,01,10,11来表示ABCD。如果出现概率不一样，那么出现概率大的，用1位数来表示，出现次数少的，用多位数来表示，这样可以减少均值（用0，1进行表示的时候，开头不能一样）。  信息熵 信息熵：一个系统越有序，则信息熵越低。反之，越高。 高信息熵（high entropy）：随机变量x是均匀分布的，各种取值是等概率出现，很难判断出现什么事件。 低">
+<meta property="og:description" content="随机森林是在Bagging策略的基础上进行修改后的一种算法 从样本集中用Bootstrap（有放回的重采样）采样选出n个样本; 从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树; 重复以上两步m次，即建立m棵决策树; 这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类  RF的推广算法 RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-17T07:13:21.000Z">
+<meta property="og:updated_time" content="2018-01-17T13:20:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="信息熵与比特化">
-<meta name="twitter:description" content="比特化 比如出现BACDBDDCD，那么可以用00,01,10,11来表示ABCD。如果出现概率不一样，那么出现概率大的，用1位数来表示，出现次数少的，用多位数来表示，这样可以减少均值（用0，1进行表示的时候，开头不能一样）。  信息熵 信息熵：一个系统越有序，则信息熵越低。反之，越高。 高信息熵（high entropy）：随机变量x是均匀分布的，各种取值是等概率出现，很难判断出现什么事件。 低">
+<meta name="twitter:title" content="随机森林">
+<meta name="twitter:description" content="随机森林是在Bagging策略的基础上进行修改后的一种算法 从样本集中用Bootstrap（有放回的重采样）采样选出n个样本; 从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树; 重复以上两步m次，即建立m棵决策树; 这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类  RF的推广算法 RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://xuangetit.github.io/2018/01/15/信息熵与比特化/"/>
+  <link rel="canonical" href="https://xuangetit.github.io/2018/01/17/随机森林/"/>
 
 
 
 
 
-  <title>信息熵与比特化 | AI小店</title>
+  <title>随机森林 | AI小店</title>
   
 
 
@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/15/信息熵与比特化/">
+    <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/17/随机森林/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="breeze">
@@ -271,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">信息熵与比特化</h1>
+          <h1 class="post-title" itemprop="name headline">随机森林</h1>
         
 
         <div class="post-meta">
@@ -283,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-15T11:45:38+08:00">
-                2018-01-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T15:39:44+08:00">
+                2018-01-17
               </time>
             
 
@@ -343,18 +343,27 @@
       
 
       
-        <h3 id="比特化"><a href="#比特化" class="headerlink" title="比特化"></a>比特化</h3><ul>
-<li>比如出现BACDBDDCD，那么可以用00,01,10,11来表示ABCD。如果出现概率不一样，那么出现概率大的，用1位数来表示，出现次数少的，用多位数来表示，这样可以减少均值（用0，1进行表示的时候，开头不能一样）。</li>
+        <h3 id="随机森林是在Bagging策略的基础上进行修改后的一种算法"><a href="#随机森林是在Bagging策略的基础上进行修改后的一种算法" class="headerlink" title="随机森林是在Bagging策略的基础上进行修改后的一种算法"></a>随机森林是在Bagging策略的基础上进行修改后的一种算法</h3><ul>
+<li>从样本集中用Bootstrap（有放回的重采样）采样选出n个样本;</li>
+<li>从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树;</li>
+<li>重复以上两步m次，即建立m棵决策树;</li>
+<li>这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类</li>
 </ul>
-<h3 id="信息熵"><a href="#信息熵" class="headerlink" title="信息熵"></a>信息熵</h3><ul>
-<li>信息熵：一个系统越有序，则信息熵越低。反之，越高。</li>
-<li>高信息熵（high entropy）：随机变量x是均匀分布的，各种取值是等概率出现，很难判断出现什么事件。</li>
-<li>低信息熵（low entropy）：随机变量x不是等概率出现，可能出现概率很大事件，也可能出现概率很小事件，容易判断事件发生。<br>$$E(X) = {-\sum_{i=1}^n{p_i\log_2 (p_i)}}$$</li>
+<h3 id="RF的推广算法"><a href="#RF的推广算法" class="headerlink" title="RF的推广算法"></a>RF的推广算法</h3><ul>
+<li>RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转换、异常点检测等。常见的RF变种算法如下:</li>
+<li>Extra Tree、Totally Random Trees Embedding(TRTE)、Isolation Forest</li>
 </ul>
-<h3 id="条件熵"><a href="#条件熵" class="headerlink" title="条件熵"></a>条件熵</h3><ul>
-<li>定义：给定随机事件X的情况下，所有不同X值情况下Y的信息熵的平均值叫做条件熵。</li>
-<li>公式一：$$H(Y|X) = {-\sum_{j=1}^n{P(X=v_j)H(Y|X=v_j)}}$$</li>
-<li>公式二：事件(X,Y)发生所包含的熵，减去事件X单独发生的熵，即为事件X发生的前提下，Y发生’新’带来的熵，这个也就是条件熵本真的概念。<br>$$H(Y|X) = {H(X,Y)-H(X)}$$</li>
+<h3 id="Extra-Tree"><a href="#Extra-Tree" class="headerlink" title="Extra Tree"></a>Extra Tree</h3><ul>
+<li>Extra Tree是RF的一个变种，原理基本和RF一样，区别如下:<ul>
+<li>RF会随机采样来作为子决策树的训练集，而Extra Tree每个子决策树采用原始数据集训练;</li>
+<li>RF在选择划分特征点的时候会和传统决策树一样，会基于信息增益、信息增益率、基尼系数、均方差等原则来选择最优特征值;而Extra Tree会随机的选择一个特征值 来划分决策树。</li>
+</ul>
+</li>
+<li>Extra Tree因为是随机选择特征值的划分点，这样会导致决策树的规模一般大于RF所生成的决策树。也就是说Extra Tree模型的方差相对于RF进一步减少。在某些情况下，<em>Extra Tree的泛化能力比RF的强</em>。</li>
+</ul>
+<h3 id="Totally-Random-Trees-Embedding-TRTE"><a href="#Totally-Random-Trees-Embedding-TRTE" class="headerlink" title="Totally Random Trees Embedding(TRTE)"></a>Totally Random Trees Embedding(TRTE)</h3><ul>
+<li>TRTE是一种非监督的数据转化方式。将低维的数据集映射到高维，从而让映射到高维的数据更好的应用于分类回归模型。</li>
+<li>TRTE算法的转换过程类似RF算法的方法，建立T个决策树来拟合数据。当决策树构建完成后，数据集里的每个数据在T个决策树中叶子节点的位置就定下来了，将位置信息转换为向量就完成了特征转换操作。</li>
 </ul>
 
       
@@ -373,7 +382,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/entropy/" rel="tag"># entropy</a>
+            <a href="/tags/RF/" rel="tag"># RF</a>
           
         </div>
       
@@ -386,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/15/决策树/" rel="next" title="决策树">
-                <i class="fa fa-chevron-left"></i> 决策树
+              <a href="/2018/01/17/Ensemble-Learning/" rel="next" title="集成学习">
+                <i class="fa fa-chevron-left"></i> 集成学习
               </a>
             
           </div>
@@ -395,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/17/Ensemble-Learning/" rel="prev" title="集成学习">
-                集成学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -544,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#比特化"><span class="nav-number">1.</span> <span class="nav-text">比特化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息熵"><span class="nav-number">2.</span> <span class="nav-text">信息熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件熵"><span class="nav-number">3.</span> <span class="nav-text">条件熵</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#随机森林是在Bagging策略的基础上进行修改后的一种算法"><span class="nav-number">1.</span> <span class="nav-text">随机森林是在Bagging策略的基础上进行修改后的一种算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RF的推广算法"><span class="nav-number">2.</span> <span class="nav-text">RF的推广算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extra-Tree"><span class="nav-number">3.</span> <span class="nav-text">Extra Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Totally-Random-Trees-Embedding-TRTE"><span class="nav-number">4.</span> <span class="nav-text">Totally Random Trees Embedding(TRTE)</span></a></li></ol></div>
             
 
           </div>
