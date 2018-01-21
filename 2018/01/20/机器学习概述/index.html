@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="AI小店">
 <meta property="og:description" content="机器学习定义 机器学习是一门从数据中研究算法的科学学科。 机器学习直白来讲，是根据已有的数据，进行算法选择，并基于算法和数据构建模型，最终对未来进行预测。 专家根据经验来机型预测，机器学习根据历史数据和相应的算法进行预测。  过程 输入值，输出值，目标函数。 目标函数f未知(无法得到)，假设函数g类似函数f，但是可能和函数f不同，机器学习中是无法找到一个完美的函数f。 从数据中获得一个假设的函数g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-21T02:07:47.000Z">
+<meta property="og:updated_time" content="2018-01-21T03:46:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习概述">
 <meta name="twitter:description" content="机器学习定义 机器学习是一门从数据中研究算法的科学学科。 机器学习直白来讲，是根据已有的数据，进行算法选择，并基于算法和数据构建模型，最终对未来进行预测。 专家根据经验来机型预测，机器学习根据历史数据和相应的算法进行预测。  过程 输入值，输出值，目标函数。 目标函数f未知(无法得到)，假设函数g类似函数f，但是可能和函数f不同，机器学习中是无法找到一个完美的函数f。 从数据中获得一个假设的函数g">
@@ -360,12 +360,142 @@
 <li>机器学习：模式识别、计算机视觉、数据挖掘、统计学习、自然语言处理、语音识别</li>
 </ul>
 <h3 id="机器学习、数据分析、数据挖掘区别与联系"><a href="#机器学习、数据分析、数据挖掘区别与联系" class="headerlink" title="机器学习、数据分析、数据挖掘区别与联系"></a>机器学习、数据分析、数据挖掘区别与联系</h3><ul>
-<li>数据分析:数据分析是指用适当的统计分析方法对收集的大量数据进行分析，并 提取有用的信息，以及形成结论，从而对数据进行详细的研究和概括过程。在实 际工作中，数据分析可帮助人们做出判断;数据分析一般而言可以分为统计分析、 探索性数据分析和验证性数据分析三大类。</li>
+<li>数据分析:数据分析是指用适当的统计分析方法对收集的大量数据进行分析，并 提取有用的信息，以及形成结论，从而对数据进行详细的研究和概括过程。在实际工作中，数据分析可帮助人们做出判断;数据分析一般而言可以分为统计分析、 探索性数据分析和验证性数据分析三大类。</li>
 <li>数据挖掘:一般指从大量的数据中通过算法搜索隐藏于其中的信息的过程。通常 通过统计、检索、机器学习、模式匹配等诸多方法来实现这个过程。</li>
 <li>机器学习:是数据分析和数据挖掘的一种比较常用、比较好的手段。</li>
 </ul>
-<h3 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h3><ul>
-<li>有监督学习：用已知某种或某些特性的样本作为训练集，以建立一个数学模型，再用已建立的模型来预 测未知样本，此种方法被称为有监督学习，是最常用的一种机器学习方法。是从标签化训 练数据集中推断出模型的机器学习任务。</li>
+<h3 id="机器学习分类一"><a href="#机器学习分类一" class="headerlink" title="机器学习分类一"></a>机器学习分类一</h3><ul>
+<li>有监督学习：用已知某种或某些特性的样本作为训练集，以建立一个数学模型，再用已建立的模型来预测未知样本，此种方法被称为有监督学习，是最常用的一种机器学习方法。是从标签化训 练数据集中推断出模型的机器学习任务。<ul>
+<li>判别式模型(Discriminative Model):直接对条件概率p(y|x)进行建模，常见判别模型有:性回归、决策树、支持向量机SVM、k近邻、神经网络等;</li>
+<li>生成式模型(Generative Model):对联合分布概率p(x,y)进行建模，常见生成式模型有: 隐马尔可夫模型HMM、朴素贝叶斯模型、高斯混合模型GMM、LDA等;</li>
+<li>生成式模型更普适;判别式模型更直接，目标性更强。</li>
+<li>生成式模型关注数据是如何产生的，寻找的是数据分布模型;判别式模型关注的数据的差异性，寻找的是分类面。</li>
+<li>由生成式模型可以产生判别式模型，但是由判别式模式没法形成生成式模型。</li>
+</ul>
+</li>
+<li>无监督学习：与监督学习相比，无监督学习的训练集中没有人为的标注的结果，在非监督的学习过程中，数据并不被特别标识，学习模型是为了推断出数据的一些内在结构。<ul>
+<li>无监督学习试图学习或者提取数据背后的数据特征，或者从数据中抽取出重要的 特征信息，常见的算法有聚类、降维、文本处理(特征抽取)等。</li>
+<li>无监督学习一般是作为有监督学习的前期数据处理，功能是从原始数据中抽取出必要的标签信息。</li>
+</ul>
+</li>
+<li>半监督学习：考虑如何利用少量的标注样本和大量的未标注样本进行训练和分类的问题，是有监督学习和无监督学习的结合。<ul>
+<li>主要考虑如何利用少量的标注样本和大量的未标注样本进行训练和分类的问题。半监督学习对于减少标注代价，提高学习机器性能具有非常重大的实际意义。</li>
+<li>SSL的成立依赖于模型假设，主要分为三大类:平滑假设、聚类假设、流行假设; 其中流行假设更具有普片性。</li>
+<li>SSL类型的算法主要分为四大类:半监督分类、半监督回归、半监督聚类、半监 督降维。</li>
+<li>缺点:抗干扰能力弱，仅适合于实验室环境，其现实意义还没有体现出来;未来的发展主要是聚焦于新模型假设的产生。</li>
+</ul>
+</li>
+</ul>
+<h3 id="机器学习分类二"><a href="#机器学习分类二" class="headerlink" title="机器学习分类二"></a>机器学习分类二</h3><ul>
+<li>分类：通过分类模型，将样本数据集中的样本映射到某个给定的类别中。</li>
+<li>聚类：通过聚类模型，将样本数据集中的样本分为几个类别，属于同一类别的样本相似性比较大。</li>
+<li>回归：反映了样本数据集中样本的属性值的特性，通过函数表达样本映射的关系来发现属性值之间的依赖关系。</li>
+<li>关联规则：获取隐藏在数据项之间的关联或相互关系，即可以根据一个数据项的出现推导出其他数据项的出现频率。</li>
+</ul>
+<h3 id="机器学习算法TOP10"><a href="#机器学习算法TOP10" class="headerlink" title="机器学习算法TOP10"></a>机器学习算法TOP10</h3><ul>
+<li>C4.5：分类决策树算法，决策树的核心算法，ID3算法的改进算法。</li>
+<li>CART：分类与回归树(Classification and Regression Trees)。</li>
+<li>kNN：K近邻分类算法;如果一个样本在特征空间中的k个最相似的样本中大多数属于某一个 类别，那么该样本也属于该类别。</li>
+<li>NaiveBayes：贝叶斯分类模型;该模型比较适合属性相关性比较小的时候，如果属性相关性比较大的 时候，决策树模型比贝叶斯分类模型效果好(原因:贝叶斯模型假设属性之间是互不影 响的)。</li>
+<li>SVM：支持向量机，一种有监督学习的统计学习方法，广泛应用于统计分类和回归分析中。</li>
+<li>EM：最大期望算法，常用于机器学习和计算机视觉中的数据集聚领域。</li>
+<li>Apriori：关联规则挖掘算法。</li>
+<li>K-Means：聚类算法，功能是将n个对象根据属性特征分为k个分割(k&lt;n); 属于无监督学习。</li>
+<li>PageRank：Google搜索重要算法之一。</li>
+<li>AdaBoost：迭代算法;利用多个分类器进行数据分类。</li>
+</ul>
+<h3 id="机器学习、人工智能和深度学习的关系"><a href="#机器学习、人工智能和深度学习的关系" class="headerlink" title="机器学习、人工智能和深度学习的关系"></a>机器学习、人工智能和深度学习的关系</h3><ul>
+<li>深度学习是机器学习的子类;深度学习是基于传统的神经网络算法发展到多隐层的一种算法体现。</li>
+<li>机器学习是人工智能的一个子类;</li>
+</ul>
+<h3 id="机器学习开发流程"><a href="#机器学习开发流程" class="headerlink" title="机器学习开发流程"></a>机器学习开发流程</h3><ul>
+<li>数据收集=》数据预处理=》特征提取=》模型构建=》模型测试评估=》投入使用(模型部署与整合)=》迭代优化。</li>
+<li>数据来源：用户访问行为数据、业务数据、外部第三方数据。</li>
+<li>数据存储:<ul>
+<li>需要存储的数据:原始数据、预处理后数据、模型结果。</li>
+<li>存储设施:mysql、HDFS、HBase、Solr、Elasticsearch、Kafka、Redis等。</li>
+</ul>
+</li>
+<li>数据收集方式: Flume &amp; Kafka</li>
+</ul>
+<h3 id="机器学习可用公开数据集"><a href="#机器学习可用公开数据集" class="headerlink" title="机器学习可用公开数据集"></a>机器学习可用公开数据集</h3><ul>
+<li>在实际工作中，我们可以使用业务数据进行机器学习开发，但是在学习过程中，没有业务数据，此时可以使用公开的数据集进行开发，常用数据集如下:</li>
+<li><a href="http://archive.ics.uci.edu/ml/datasets.html" target="_blank" rel="noopener">1</a></li>
+<li><a href="https://aws.amazon.com/cn/public-datasets/" target="_blank" rel="noopener">2</a></li>
+<li><a href="https://www.kaggle.com/competitions" target="_blank" rel="noopener">3</a></li>
+<li><a href="http://www.kdnuggets.com/datasets/index.html" target="_blank" rel="noopener">4</a></li>
+<li><a href="http://www.sogou.com/labs/resource/list_pingce.php" target="_blank" rel="noopener">5</a></li>
+<li><a href="https://tianchi.aliyun.com/datalab/index.htm" target="_blank" rel="noopener">6</a></li>
+<li><a href="http://www.pkbigdata.com/common/cmptIndex.html" target="_blank" rel="noopener">7</a></li>
+</ul>
+<h3 id="数据清洗和转换"><a href="#数据清洗和转换" class="headerlink" title="数据清洗和转换"></a>数据清洗和转换</h3><ul>
+<li>实际生产环境中机器学习比较耗时的一部分</li>
+<li>大部分的机器学习模型所处理的都是特征，特征通常是输入变量所对应的可用于模型的数值表示。</li>
+<li>大部分情况下 ，收集得到的数据需要经过预处理后才能够为算法所使用，预处理的操作 主要包括以下几个部分:<ul>
+<li>数据过滤</li>
+<li>处理数据缺失</li>
+<li>处理可能的异常、错误或者异常值</li>
+<li>合并多个数据源数据</li>
+<li>数据汇总</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据清洗和转换-1"><a href="#数据清洗和转换-1" class="headerlink" title="数据清洗和转换"></a>数据清洗和转换</h3><ul>
+<li>对数据进行初步的预处理，需要将其转换为一种适合机器学习模型的表示形式，对许多模型类型来说，这种表示就是包含数值数据的向量或者矩阵。<ul>
+<li>将类别数据编码成为对应的数值表示(一般使用1-of-k方法)-dumy</li>
+<li>从文本数据中提取有用的数据(一般使用词袋法或者TF-IDF)</li>
+<li>处理图像或者音频数据(像素、声波、音频、振幅等&lt;傅里叶变换&gt;)</li>
+<li>数值数据转换为类别数据以减少变量的值，比如年龄分段</li>
+<li>对数值数据进行转换，比如对数转换</li>
+<li>对特征进行正则化、标准化，以保证同一模型的不同输入变量的值域相同</li>
+<li>对现有变量进行组合或转换以生成新特征，比如平均数 (做虚拟变量)不断尝试<h3 id="类型特征转换之1-of-k"><a href="#类型特征转换之1-of-k" class="headerlink" title="类型特征转换之1-of-k"></a>类型特征转换之1-of-k</h3></li>
+</ul>
+</li>
+<li>功能:将非数值型的特征值转换为数值型的数据</li>
+<li>描述:假设变量的取值有k个，如果对这些值用1到k编序，则可用维度为k的向量来表示一个变量的值。在这样的向量里，该取值所对应的序号所在的元素为1，其他元素均为0.</li>
+</ul>
+<h3 id="文本数据抽取"><a href="#文本数据抽取" class="headerlink" title="文本数据抽取"></a>文本数据抽取</h3><ul>
+<li>词袋法:将文本当作一个无序的数据集合，文本特征可以采用文本中的词条T进行体现，那么文本中出现的所有词条及其出现的次数就可以体现文档的特征。</li>
+<li>TF-IDF: 词条的重要性随着它在文件中出现的次数成正比增加，但同时会随着它 在语料库中出现的频率成反比下降;也就是说词条在文本中出现的次数越多，表示该词条对该文本的重要性越高，词条在所有文本中出现的次数越少，说明这个词条对文本的重要性越高。TF(词频)指某个词条在文本中出现的次数，一般会将其进行归一化处理(该词条数量/该文档中所有词条数量);IDF(逆向文件频率)指一个词条重要性的度量，一般计算方式为总文件数目除以包含该词语之文件的数 目，再将得到的商取对数得到。TF-IDF实际上是:TF * IDF</li>
+</ul>
+<h3 id="模型训练及测试"><a href="#模型训练及测试" class="headerlink" title="模型训练及测试"></a>模型训练及测试</h3><ul>
+<li>模型选择:对特定任务最优建模方法的选择或者对特定模型最佳参数的选择。</li>
+<li>在训练数据集上运行模型(算法)并在测试数据集中测试效果，迭代进行数据模型的修改，这种方式被称为交叉验证(将数据分为训练集和测试集，使用训练集构建模型，并使用测试集评估模型提供修改建议)。</li>
+<li>模型的选择会尽可能多的选择算法进行执行，并比较执行结果。</li>
+<li>模型的测试一般以下几个方面来进行比较，分别是准确率/召回率/精准率/F值<ul>
+<li>准确率(Accuracy)=提取出的正确样本数/总样本数</li>
+<li>召回率(Recall)=正确的正例样本数/样本中的正例样本数——覆盖率</li>
+<li>精准率(Precision)=正确的正例样本数/预测为正例的样本数</li>
+<li>F值=Precision<em>Recall</em>2 / (Precision+Recall) (即F值为正确率和召回率的调和平均值)</li>
+</ul>
+</li>
+<li>ROC<ul>
+<li>ROC(Receiver Operating Characteristic)最初源于20世纪70年代的信号检测理论，描述的是分类混淆矩阵中FPR-TPR两个量之间的相对变化情况，ROC曲线的纵轴是“真正例率”(True Positive Rate 简称TPR)，横轴是“假正例率” (False Positive Rate 简称FPR)。</li>
+<li>如果二元分类器输出的是对正样本的一个分类概率值，当取不同阈值时会得到不同的混淆矩阵，对应于ROC曲线上的一个点。那么ROC曲线就反映了FPR与TPR之间权衡的情况，通俗地来说，即在TPR随着FPR递增的情况下，谁增长得更快，快多少的问题。TPR增长得越快，曲线越往上屈，AUC就越大，反映了模型的分类性能就越好。当正负样本不平衡时，这种模型评价方式比起一般的精确度评价方式的好处尤其显著。</li>
+</ul>
+</li>
+<li>AUC：AUC的值越大表达模型越好<ul>
+<li>AUC(Area Under Curve)被定义为ROC曲线下的面积，显然这个面积的数值不会大于1。又由于ROC曲线一般都处于y=x这条直线的上方，所以AUC的取值范围在0.5和1之间。使用AUC值作为评价标准是因为很多时候ROC曲线并不能清晰的说明哪个分类器的效果更好， 而AUC作为数值可以直观的评价分类器的好坏，值越大越好。</li>
+<li>AUC = 1，是完美分类器，采用这个预测模型时，不管设定什么阈值都能得出完美预测。绝大多数预测的场合，不存在完美分类器。0.5 &lt; AUC &lt; 1，优于随机猜测。这个分类器(模型)妥善设定阈值 的话，能有预测价值。AUC = 0.5，跟随机猜测一样(例:丢铜板)，模型没有预测价值。 AUC &lt; 0.5，比随机猜测还差;但只要总是反预测而行，就优于随机 猜测。</li>
+</ul>
+</li>
+</ul>
+<h3 id="模型评估"><a href="#模型评估" class="headerlink" title="模型评估"></a>模型评估</h3><ul>
+<li>回归结果度量<ul>
+<li>explained_varicance_score:可解释方差的回归评分函数</li>
+<li>mean_absolute_error:平均绝对误差</li>
+<li>mean_squared_error:平均平方误差</li>
+</ul>
+</li>
+</ul>
+<h3 id="模型部署和整合"><a href="#模型部署和整合" class="headerlink" title="模型部署和整合"></a>模型部署和整合</h3><ul>
+<li>当模型构建好后，将训练好的模型存储到数据库中，方便其它使用模型的应用加 载(构建好的模型一般为一个矩阵)</li>
+<li>模型需要周期性</li>
+<li>一个月、一周</li>
+</ul>
+<h3 id="模型的监控与反馈"><a href="#模型的监控与反馈" class="headerlink" title="模型的监控与反馈"></a>模型的监控与反馈</h3><ul>
+<li>当模型一旦投入到实际生产环境中，模型的效果监控是非常重要的，往往需要关注业务效果和用户体验，所以有时候会进行A/B测试。</li>
+<li>模型需要对用户的反馈进行响应操作，即进行模型修改，但是要注意异常反馈信息对模型的影响，故需要进行必要的数据预处理操作。</li>
 </ul>
 
       
@@ -551,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习定义"><span class="nav-number">1.</span> <span class="nav-text">机器学习定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习概念"><span class="nav-number">3.</span> <span class="nav-text">机器学习概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习含义"><span class="nav-number">4.</span> <span class="nav-text">机器学习含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习之常见应用框架"><span class="nav-number">5.</span> <span class="nav-text">机器学习之常见应用框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习商业场景"><span class="nav-number">6.</span> <span class="nav-text">机器学习商业场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习、数据分析、数据挖掘区别与联系"><span class="nav-number">7.</span> <span class="nav-text">机器学习、数据分析、数据挖掘区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习分类"><span class="nav-number">8.</span> <span class="nav-text">机器学习分类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习定义"><span class="nav-number">1.</span> <span class="nav-text">机器学习定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习概念"><span class="nav-number">3.</span> <span class="nav-text">机器学习概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习含义"><span class="nav-number">4.</span> <span class="nav-text">机器学习含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习之常见应用框架"><span class="nav-number">5.</span> <span class="nav-text">机器学习之常见应用框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习商业场景"><span class="nav-number">6.</span> <span class="nav-text">机器学习商业场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习、数据分析、数据挖掘区别与联系"><span class="nav-number">7.</span> <span class="nav-text">机器学习、数据分析、数据挖掘区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习分类一"><span class="nav-number">8.</span> <span class="nav-text">机器学习分类一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习分类二"><span class="nav-number">9.</span> <span class="nav-text">机器学习分类二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习算法TOP10"><span class="nav-number">10.</span> <span class="nav-text">机器学习算法TOP10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习、人工智能和深度学习的关系"><span class="nav-number">11.</span> <span class="nav-text">机器学习、人工智能和深度学习的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习开发流程"><span class="nav-number">12.</span> <span class="nav-text">机器学习开发流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习可用公开数据集"><span class="nav-number">13.</span> <span class="nav-text">机器学习可用公开数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据清洗和转换"><span class="nav-number">14.</span> <span class="nav-text">数据清洗和转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据清洗和转换-1"><span class="nav-number">15.</span> <span class="nav-text">数据清洗和转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型特征转换之1-of-k"><span class="nav-number">16.</span> <span class="nav-text">类型特征转换之1-of-k</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本数据抽取"><span class="nav-number">17.</span> <span class="nav-text">文本数据抽取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型训练及测试"><span class="nav-number">18.</span> <span class="nav-text">模型训练及测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型评估"><span class="nav-number">19.</span> <span class="nav-text">模型评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型部署和整合"><span class="nav-number">20.</span> <span class="nav-text">模型部署和整合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型的监控与反馈"><span class="nav-number">21.</span> <span class="nav-text">模型的监控与反馈</span></a></li></ol></div>
             
 
           </div>
