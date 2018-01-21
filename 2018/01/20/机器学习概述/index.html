@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="RF," />
+  <meta name="keywords" content="ML," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="随机森林是在Bagging策略的基础上进行修改后的一种算法 从样本集中用Bootstrap（有放回的重采样）采样选出n个样本; 从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树; 重复以上两步m次，即建立m棵决策树; 这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类  RF的推广算法 RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转">
-<meta name="keywords" content="RF">
+<meta name="description" content="机器学习定义 机器学习是一门从数据中研究算法的科学学科。 机器学习直白来讲，是根据已有的数据，进行算法选择，并基于算法和数据构建模型，最终对未来进行预测。 专家根据经验来机型预测，机器学习根据历史数据和相应的算法进行预测。  过程 输入值，输出值，目标函数。 目标函数f未知(无法得到)，假设函数g类似函数f，但是可能和函数f不同，机器学习中是无法找到一个完美的函数f。 从数据中获得一个假设的函数g">
+<meta name="keywords" content="ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随机森林">
-<meta property="og:url" content="https://xuangetit.github.io/2018/01/17/随机森林/index.html">
+<meta property="og:title" content="机器学习概述">
+<meta property="og:url" content="https://xuangetit.github.io/2018/01/20/机器学习概述/index.html">
 <meta property="og:site_name" content="AI小店">
-<meta property="og:description" content="随机森林是在Bagging策略的基础上进行修改后的一种算法 从样本集中用Bootstrap（有放回的重采样）采样选出n个样本; 从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树; 重复以上两步m次，即建立m棵决策树; 这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类  RF的推广算法 RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转">
+<meta property="og:description" content="机器学习定义 机器学习是一门从数据中研究算法的科学学科。 机器学习直白来讲，是根据已有的数据，进行算法选择，并基于算法和数据构建模型，最终对未来进行预测。 专家根据经验来机型预测，机器学习根据历史数据和相应的算法进行预测。  过程 输入值，输出值，目标函数。 目标函数f未知(无法得到)，假设函数g类似函数f，但是可能和函数f不同，机器学习中是无法找到一个完美的函数f。 从数据中获得一个假设的函数g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-17T13:20:19.000Z">
+<meta property="og:updated_time" content="2018-01-21T02:07:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随机森林">
-<meta name="twitter:description" content="随机森林是在Bagging策略的基础上进行修改后的一种算法 从样本集中用Bootstrap（有放回的重采样）采样选出n个样本; 从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树; 重复以上两步m次，即建立m棵决策树; 这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类  RF的推广算法 RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转">
+<meta name="twitter:title" content="机器学习概述">
+<meta name="twitter:description" content="机器学习定义 机器学习是一门从数据中研究算法的科学学科。 机器学习直白来讲，是根据已有的数据，进行算法选择，并基于算法和数据构建模型，最终对未来进行预测。 专家根据经验来机型预测，机器学习根据历史数据和相应的算法进行预测。  过程 输入值，输出值，目标函数。 目标函数f未知(无法得到)，假设函数g类似函数f，但是可能和函数f不同，机器学习中是无法找到一个完美的函数f。 从数据中获得一个假设的函数g">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://xuangetit.github.io/2018/01/17/随机森林/"/>
+  <link rel="canonical" href="https://xuangetit.github.io/2018/01/20/机器学习概述/"/>
 
 
 
 
 
-  <title>随机森林 | AI小店</title>
+  <title>机器学习概述 | AI小店</title>
   
 
 
@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/17/随机森林/">
+    <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/20/机器学习概述/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="breeze">
@@ -271,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">随机森林</h1>
+          <h1 class="post-title" itemprop="name headline">机器学习概述</h1>
         
 
         <div class="post-meta">
@@ -283,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T15:39:44+08:00">
-                2018-01-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T11:36:34+08:00">
+                2018-01-20
               </time>
             
 
@@ -293,28 +293,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ML/" itemprop="url" rel="index">
-                    <span itemprop="name">ML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -343,27 +321,51 @@
       
 
       
-        <h3 id="随机森林是在Bagging策略的基础上进行修改后的一种算法"><a href="#随机森林是在Bagging策略的基础上进行修改后的一种算法" class="headerlink" title="随机森林是在Bagging策略的基础上进行修改后的一种算法"></a>随机森林是在Bagging策略的基础上进行修改后的一种算法</h3><ul>
-<li>从样本集中用Bootstrap（有放回的重采样）采样选出n个样本;</li>
-<li>从所有属性中随机选择K个属性，选择出最佳分割属性作为节点创建决策树;</li>
-<li>重复以上两步m次，即建立m棵决策树;</li>
-<li>这m个决策树形成随机森林，通过投票表决结果决定数据属于那一类</li>
+        <h3 id="机器学习定义"><a href="#机器学习定义" class="headerlink" title="机器学习定义"></a>机器学习定义</h3><ul>
+<li>机器学习是一门从数据中研究算法的科学学科。</li>
+<li>机器学习直白来讲，是根据已有的数据，进行算法选择，并基于算法和数据构建模型，最终对未来进行预测。</li>
+<li>专家根据经验来机型预测，机器学习根据历史数据和相应的算法进行预测。</li>
 </ul>
-<h3 id="RF的推广算法"><a href="#RF的推广算法" class="headerlink" title="RF的推广算法"></a>RF的推广算法</h3><ul>
-<li>RF算法在实际应用中具有比较好的特性，应用也比较广泛，主要应用在:分类、回归、特征转换、异常点检测等。常见的RF变种算法如下:</li>
-<li>Extra Tree、Totally Random Trees Embedding(TRTE)、Isolation Forest</li>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><ul>
+<li>输入值，输出值，目标函数。</li>
+<li>目标函数f未知(无法得到)，假设函数g类似函数f，但是可能和函数f不同，机器学习中是无法找到一个完美的函数f。</li>
+<li>从数据中获得一个假设的函数g，使其非常接近目标函数f的效果。</li>
 </ul>
-<h3 id="Extra-Tree"><a href="#Extra-Tree" class="headerlink" title="Extra Tree"></a>Extra Tree</h3><ul>
-<li>Extra Tree是RF的一个变种，原理基本和RF一样，区别如下:<ul>
-<li>RF会随机采样来作为子决策树的训练集，而Extra Tree每个子决策树采用原始数据集训练;</li>
-<li>RF在选择划分特征点的时候会和传统决策树一样，会基于信息增益、信息增益率、基尼系数、均方差等原则来选择最优特征值;而Extra Tree会随机的选择一个特征值 来划分决策树。</li>
+<h3 id="机器学习概念"><a href="#机器学习概念" class="headerlink" title="机器学习概念"></a>机器学习概念</h3><ul>
+<li>对于某给定的任务T，在合理的性能度量方案P的前提下，某计算机程序可以自主学习任 务T的经验E;随着提供合适、优质、大量的经验E，该程序对于任务T的性能逐步提高。</li>
+<li>其中重要的机器学习对象: 任务Task T，一个或多个、经验Experience E、度量性能Performance P，随着任务的不断执行，经验的累积会带来计算机性能的提升。</li>
+<li>算法(T):根据业务需要和数据特征选择的相关算法， 也就是一个数学公式</li>
+<li>模型(E):基于数据和算法构建出来的模型</li>
+<li>评估/测试(P):对模型进行评估的策略</li>
+<li>拟合:构建的算法符合给定数据的特征</li>
+<li>x^i：表示第i个样本的x向量</li>
+<li>x_i: x向量的第i维度的值</li>
+<li>鲁棒性:也就是健壮性、稳健性、强健性,是系统的健壮性;当存在异常数据的 时候，算法也会拟合数据</li>
+<li>过拟合:算法太符合样本数据的特征，对于实际生产中的数据特征无法拟合</li>
+<li>欠拟合:算法不太符合样本的数据特征</li>
 </ul>
-</li>
-<li>Extra Tree因为是随机选择特征值的划分点，这样会导致决策树的规模一般大于RF所生成的决策树。也就是说Extra Tree模型的方差相对于RF进一步减少。在某些情况下，<em>Extra Tree的泛化能力比RF的强</em>。</li>
+<h3 id="机器学习含义"><a href="#机器学习含义" class="headerlink" title="机器学习含义"></a>机器学习含义</h3><ul>
+<li>机器学习是人工智能的一个分支。我们使用计算机设计一个系统，使它能够根据提供的训练数据按照一定的方式来学习;随着训练次数的增加，该系统可以在性能上不断学习和改进;通过参数优化的学习模型，能够用于预测相关问题的输出。</li>
 </ul>
-<h3 id="Totally-Random-Trees-Embedding-TRTE"><a href="#Totally-Random-Trees-Embedding-TRTE" class="headerlink" title="Totally Random Trees Embedding(TRTE)"></a>Totally Random Trees Embedding(TRTE)</h3><ul>
-<li>TRTE是一种非监督的数据转化方式。将低维的数据集映射到高维，从而让映射到高维的数据更好的应用于分类回归模型。</li>
-<li>TRTE算法的转换过程类似RF算法的方法，建立T个决策树来拟合数据。当决策树构建完成后，数据集里的每个数据在T个决策树中叶子节点的位置就定下来了，将位置信息转换为向量就完成了特征转换操作。</li>
+<h3 id="机器学习之常见应用框架"><a href="#机器学习之常见应用框架" class="headerlink" title="机器学习之常见应用框架"></a>机器学习之常见应用框架</h3><ul>
+<li><a href="http://scikit-learn.org/stable/" target="_blank" rel="noopener">sciket-learn(Python)</a></li>
+<li><a href="http://mahout.apache.org/" target="_blank" rel="noopener">Mahout</a></li>
+<li><a href="http://spark.apache.org/" target="_blank" rel="noopener">Spark MLlib</a></li>
+</ul>
+<h3 id="机器学习商业场景"><a href="#机器学习商业场景" class="headerlink" title="机器学习商业场景"></a>机器学习商业场景</h3><ul>
+<li>个性化推荐:个性化指的是根据各种因素来改变用户体验和呈现给用户内容，这 些因素可能包含用户的行为数据和外部因素;推荐常指系统向用户呈现一个用户 可能感兴趣的物品列表。</li>
+<li>精准营销:从用户群众中找出特定的要求的营销对象。</li>
+<li>客户细分:试图将用户群体分为不同的组，根据给定的用户特征进行客户分组。</li>
+<li>预测建模及分析:根据已有的数据进行建模，并使用得到的模型预测未来。</li>
+<li>机器学习：模式识别、计算机视觉、数据挖掘、统计学习、自然语言处理、语音识别</li>
+</ul>
+<h3 id="机器学习、数据分析、数据挖掘区别与联系"><a href="#机器学习、数据分析、数据挖掘区别与联系" class="headerlink" title="机器学习、数据分析、数据挖掘区别与联系"></a>机器学习、数据分析、数据挖掘区别与联系</h3><ul>
+<li>数据分析:数据分析是指用适当的统计分析方法对收集的大量数据进行分析，并 提取有用的信息，以及形成结论，从而对数据进行详细的研究和概括过程。在实 际工作中，数据分析可帮助人们做出判断;数据分析一般而言可以分为统计分析、 探索性数据分析和验证性数据分析三大类。</li>
+<li>数据挖掘:一般指从大量的数据中通过算法搜索隐藏于其中的信息的过程。通常 通过统计、检索、机器学习、模式匹配等诸多方法来实现这个过程。</li>
+<li>机器学习:是数据分析和数据挖掘的一种比较常用、比较好的手段。</li>
+</ul>
+<h3 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h3><ul>
+<li>有监督学习：用已知某种或某些特性的样本作为训练集，以建立一个数学模型，再用已建立的模型来预 测未知样本，此种方法被称为有监督学习，是最常用的一种机器学习方法。是从标签化训 练数据集中推断出模型的机器学习任务。</li>
 </ul>
 
       
@@ -382,7 +384,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/RF/" rel="tag"># RF</a>
+            <a href="/tags/ML/" rel="tag"># ML</a>
           
         </div>
       
@@ -395,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/17/Ensemble-Learning/" rel="next" title="集成学习">
-                <i class="fa fa-chevron-left"></i> 集成学习
+              <a href="/2018/01/19/聚类/" rel="next" title="聚类">
+                <i class="fa fa-chevron-left"></i> 聚类
               </a>
             
           </div>
@@ -404,10 +406,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/19/聚类/" rel="prev" title="聚类">
-                聚类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#随机森林是在Bagging策略的基础上进行修改后的一种算法"><span class="nav-number">1.</span> <span class="nav-text">随机森林是在Bagging策略的基础上进行修改后的一种算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RF的推广算法"><span class="nav-number">2.</span> <span class="nav-text">RF的推广算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extra-Tree"><span class="nav-number">3.</span> <span class="nav-text">Extra Tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Totally-Random-Trees-Embedding-TRTE"><span class="nav-number">4.</span> <span class="nav-text">Totally Random Trees Embedding(TRTE)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习定义"><span class="nav-number">1.</span> <span class="nav-text">机器学习定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习概念"><span class="nav-number">3.</span> <span class="nav-text">机器学习概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习含义"><span class="nav-number">4.</span> <span class="nav-text">机器学习含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习之常见应用框架"><span class="nav-number">5.</span> <span class="nav-text">机器学习之常见应用框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习商业场景"><span class="nav-number">6.</span> <span class="nav-text">机器学习商业场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习、数据分析、数据挖掘区别与联系"><span class="nav-number">7.</span> <span class="nav-text">机器学习、数据分析、数据挖掘区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习分类"><span class="nav-number">8.</span> <span class="nav-text">机器学习分类</span></a></li></ol></div>
             
 
           </div>

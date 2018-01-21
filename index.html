@@ -253,6 +253,299 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/20/机器学习概述/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="breeze">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/log.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI小店">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/20/机器学习概述/" itemprop="url">机器学习概述</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T11:36:34+08:00">
+                2018-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="机器学习定义"><a href="#机器学习定义" class="headerlink" title="机器学习定义"></a>机器学习定义</h3><ul>
+<li>机器学习是一门从数据中研究算法的科学学科。</li>
+<li>机器学习直白来讲，是根据已有的数据，进行算法选择，并基于算法和数据构建模型，最终对未来进行预测。</li>
+<li>专家根据经验来机型预测，机器学习根据历史数据和相应的算法进行预测。</li>
+</ul>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><ul>
+<li>输入值，输出值，目标函数。</li>
+<li>目标函数f未知(无法得到)，假设函数g类似函数f，但是可能和函数f不同，机器学习中是无法找到一个完美的函数f。</li>
+<li>从数据中获得一个假设的函数g，使其非常接近目标函数f的效果。</li>
+</ul>
+<h3 id="机器学习概念"><a href="#机器学习概念" class="headerlink" title="机器学习概念"></a>机器学习概念</h3><ul>
+<li>对于某给定的任务T，在合理的性能度量方案P的前提下，某计算机程序可以自主学习任 务T的经验E;随着提供合适、优质、大量的经验E，该程序对于任务T的性能逐步提高。</li>
+<li>其中重要的机器学习对象: 任务Task T，一个或多个、经验Experience E、度量性能Performance P，随着任务的不断执行，经验的累积会带来计算机性能的提升。</li>
+<li>算法(T):根据业务需要和数据特征选择的相关算法， 也就是一个数学公式</li>
+<li>模型(E):基于数据和算法构建出来的模型</li>
+<li>评估/测试(P):对模型进行评估的策略</li>
+<li>拟合:构建的算法符合给定数据的特征</li>
+<li>x^i：表示第i个样本的x向量</li>
+<li>x_i: x向量的第i维度的值</li>
+<li>鲁棒性:也就是健壮性、稳健性、强健性,是系统的健壮性;当存在异常数据的 时候，算法也会拟合数据</li>
+<li>过拟合:算法太符合样本数据的特征，对于实际生产中的数据特征无法拟合</li>
+<li>欠拟合:算法不太符合样本的数据特征</li>
+</ul>
+<h3 id="机器学习含义"><a href="#机器学习含义" class="headerlink" title="机器学习含义"></a>机器学习含义</h3><ul>
+<li>机器学习是人工智能的一个分支。我们使用计算机设计一个系统，使它能够根据提供的训练数据按照一定的方式来学习;随着训练次数的增加，该系统可以在性能上不断学习和改进;通过参数优化的学习模型，能够用于预测相关问题的输出。</li>
+</ul>
+<h3 id="机器学习之常见应用框架"><a href="#机器学习之常见应用框架" class="headerlink" title="机器学习之常见应用框架"></a>机器学习之常见应用框架</h3><ul>
+<li><a href="http://scikit-learn.org/stable/" target="_blank" rel="noopener">sciket-learn(Python)</a></li>
+<li><a href="http://mahout.apache.org/" target="_blank" rel="noopener">Mahout</a></li>
+<li><a href="http://spark.apache.org/" target="_blank" rel="noopener">Spark MLlib</a></li>
+</ul>
+<h3 id="机器学习商业场景"><a href="#机器学习商业场景" class="headerlink" title="机器学习商业场景"></a>机器学习商业场景</h3><ul>
+<li>个性化推荐:个性化指的是根据各种因素来改变用户体验和呈现给用户内容，这 些因素可能包含用户的行为数据和外部因素;推荐常指系统向用户呈现一个用户 可能感兴趣的物品列表。</li>
+<li>精准营销:从用户群众中找出特定的要求的营销对象。</li>
+<li>客户细分:试图将用户群体分为不同的组，根据给定的用户特征进行客户分组。</li>
+<li>预测建模及分析:根据已有的数据进行建模，并使用得到的模型预测未来。</li>
+<li>机器学习：模式识别、计算机视觉、数据挖掘、统计学习、自然语言处理、语音识别</li>
+</ul>
+<h3 id="机器学习、数据分析、数据挖掘区别与联系"><a href="#机器学习、数据分析、数据挖掘区别与联系" class="headerlink" title="机器学习、数据分析、数据挖掘区别与联系"></a>机器学习、数据分析、数据挖掘区别与联系</h3><ul>
+<li>数据分析:数据分析是指用适当的统计分析方法对收集的大量数据进行分析，并 提取有用的信息，以及形成结论，从而对数据进行详细的研究和概括过程。在实 际工作中，数据分析可帮助人们做出判断;数据分析一般而言可以分为统计分析、 探索性数据分析和验证性数据分析三大类。</li>
+<li>数据挖掘:一般指从大量的数据中通过算法搜索隐藏于其中的信息的过程。通常 通过统计、检索、机器学习、模式匹配等诸多方法来实现这个过程。</li>
+<li>机器学习:是数据分析和数据挖掘的一种比较常用、比较好的手段。</li>
+</ul>
+<h3 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h3><ul>
+<li>有监督学习：用已知某种或某些特性的样本作为训练集，以建立一个数学模型，再用已建立的模型来预 测未知样本，此种方法被称为有监督学习，是最常用的一种机器学习方法。是从标签化训 练数据集中推断出模型的机器学习任务。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/19/聚类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="breeze">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/log.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AI小店">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/19/聚类/" itemprop="url">聚类</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T10:26:08+08:00">
+                2018-01-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>聚类就是对大量未知标注的数据集，按照数据内部存在的数据特征将数据集划分为多个不同的类别，使类别内的数据比较相似，类别之间的数据相似度比较小; 属于无监督学习。</li>
+<li>聚类算法的重点是计算样本项之间的相似度，有时候也称为样本间的距离</li>
+<li>和分类算法的区别:<ul>
+<li>分类算法是有监督学习，基于有标注的历史数据进行算法模型构建</li>
+<li>聚类算法是无监督学习，数据集中的数据是没有标注的</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xuangetit.github.io/2018/01/17/随机森林/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -525,6 +818,27 @@
 <li>Bagging方法训练出来的模型在预测新样本分类的时候，会使用多数<em>投票</em>（有权重）或者求 均值的方式来统计最终的分类结果。</li>
 <li>Bagging方法的弱学习器可以是基本的算法模型，eg: Linear、Ridge、Lasso、 Logistic、Softmax、ID3、C4.5、CART、SVM、KNN等。</li>
 <li>备注:Bagging方式是有放回的抽样，并且每个子集的样本数量必须和原始样本 数量一致，但是子集中允许存在重复数据。</li>
+</ul>
+<h3 id="Boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h3><ul>
+<li>提升学习(Boosting)是一种机器学习技术，可以用于回归和分类的问题，它每一步产生弱预测模型(如决策树)，并加权累加到总模型中;如果每一步的弱预测模型的生成都是依据损失函数的梯度方式的，那么就称为梯度提升(Gradient boosting);</li>
+<li>提升技术的意义:如果一个问题存在弱预测模型，那么可以通过提升技术的办法得到一个强预测模型;</li>
+<li>常见的模型有: Adaboost（boosting的算法指的是adboost）, Gradient Boosting(GBT/<em>GBDT</em>/GBRT)<ul>
+<li>Adaboost算法原理<ul>
+<li>Adaptive Boosting是一种迭代算法。每轮迭代中会在训练集上产生一个新的学习器，然后使用该学习器对所有样本进行预测，以评估每个样本的重要性 (Informative)。换句话来讲就是，算法会为每个样本赋予一个权重，每次用训练好的学习器标注/预测各个样本，如果某个样本点被预测的越正确，则将其权重降低;否则提高样本的权重。权重越高的样本在下一个迭代训练中所占的比重就越大，也就是说越难区分的样本在训练过程中会变得越重要;</li>
+<li>整个迭代过程直到错误率足够小或者达到一定的迭代次数为止。</li>
+</ul>
+</li>
+<li>Adaboost算法将基分类器的线性组合作为强分类器，同时给分类误差率较小的基本分类器以大的权值，给分类误差率较大的基分类器以小的权重值;构建的线性组合为:<br>$$f(x)=\sum_{m=1}^{M}\alpha_mG_m(x)$$</li>
+<li>最终分类器是在线性组合的基础上进行Sign函数(大于0为1，小于0位-1)转换:<br>$$G(x)=sing(f(x))=sign[\sum_{m=1}^{M}\alpha_mG_m(x)]$$</li>
+<li>相关公式：<ul>
+<li>最终的强学习器：$$G(x)=sing(f(x))=sign[\sum_{m=1}^{M}\alpha_mG_m(x)]$$</li>
+<li>损失函数：其中I取值为0或1，相等为0，不相等为1。 $$loss=\frac{1}{n}{\sum_{i=1}^n}I(G(x_i\neq{y_i}))$$</li>
+<li>损失函数：为了方便计算，所以公式变化一下。 如下：$$loss \le {\sum_{i=1}^{n}}e^{(-y_if(x))}$$</li>
+</ul>
+</li>
+<li>算法推到，公式比较复杂，很难敲打，先省略。。。</li>
+</ul>
+</li>
 </ul>
 
           
@@ -1233,7 +1547,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
